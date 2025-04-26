@@ -288,10 +288,50 @@ X = X + 5
 
 
 
+===================================================================
+
+OPERADORES DE ATRIBUIÇÃO:
+
+- Pode-se comparar qualquer tipo de dado: números, strings, bytes...
+
+-A comparação SEMPRE retorna True or False;
+
+Ex:
+
+- Igual: ==
+
+- Diferente: !=
+
+- Maior que: >
+
+- Menor que: <
+
+- Maior ou igual a: >=
+
+- Menor ou igual a: <=
+
+-------------------------------------------------
+
+Ex:
+
+int x = 25;
+
+x == 0;  // False
+
+x != 0;  // True
+
+x > 0; // True
+
+x < 0;  // False
+
+x <= 0;  // False
+
+x >= 0;  // True
 
 
+===========================================================
 
-
+UTILIZANDO OPERADORES:
 
 
 
