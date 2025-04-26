@@ -331,18 +331,135 @@ x >= 0;  // True
 
 ===========================================================
 
-UTILIZANDO OPERADORES:
+OPERADORES LÓGICOS:
+
+- Usados em operações condicionais;
+- Retorna SEMPRE verdadeiro ou falso;
+
+------------------------------
+
+E - AND: &&
+
+OU - OR: ||
+
+NEGAÇÃO - NOT: !
 
 
+Ex:
+
+	int x = 12;
+	bool e = (x > 25) && (x < 40);  //False
+	bool ou = (x > 25) || (x < 40);  //True
+	bool negacao = !(x < 25);   //False
+
+================================================================
+
+ESTRUTURA CONDICIONAL IF:
+
+- Tradução: "SE", ou seja, "Caso alguma condição seja atendida";
+- Usado para tomada de decisões;
+- Utiliza os operadores lógicos;
+
+---------------------------------------
+
+ESTRUTURA CONDICIONAL ELSE:
+
+- Complemento do IF;
+- Caso a condição não seja atendida;
+- Podemos ter
+	else if (condição)
+	não tem limites (Mas cuidado)
+
+- Podemos ter else para executar algo caso a condição seja atendida;
+
+Ex:
+
+	if(condicao) { // Caso seja verdadeiro
+		...
+	}
+
+	if(condicao) //Caso seja verdadeiro;
+		...   //Caso só haja uma linha, não precisa de chaves;
+
+------------------------------------------------
+
+Ex:
+
+	if(condicao) { // caso seja verdadeiro
+	} else {  // Caso seja falso
+		...
+	}
+
+	if(condicao) //Caso seja verdadeiro
+		...  //Caso só haja uma linha, não precisa de chaves
+	else //Caso seja falso
+		...
+
+====================================================================
+
+ESTRUTURA CONDICIONAL SWITCH:
+
+- Utilizado quando temos muitas decisões;
+
+- Executado em cascata;
+
+- Devemos parar manualmente a execução com o comando BREAK;
+
+- Possui uma execução padrão chamada 'default';
 
 
+Ex:
+
+	int valor = 1;
+	switch (valor)
+	{
+		case 1: Console.WriteLine("1"); break;
+		case 2: Console.WriteLine("2"); break;
+		case 3: Console.WriteLine("3"); break;
+		default: Console.WriteLine("4"); break;  //Se não for nenhum acima, será esse;
+
+=====================================================================
+
+LAÇOS DE REPETIÇÃO: FOR
+
+- Tradução "para", ou seja, para cada item em um valor;
+
+- Executa uma determinada ação várias vezes;
+
+- Definido pela palavra 'for';
+
+- Exige 3 parâmetros:
+
+	- Contador;
+	- Condição;
+	- Incremento;
+
+Ex:
+
+	for (var i = 0; i <=5; i++)
 
 
+Ex:
 
+	//Conta de 0 a 5
 
+	for (var i = 0; i <= 5; i++)
+		Console.WriteLine(i);
+	
+	//Conta de 1 a 5
+	
+	for (var i = 1; i <=5; i++)
+		Console.WriteLine(i);
 
+	//Conta de 0 a 4
 
+	for (var i = 0; i < 5; i++)
+		Console.WriteLine(i);
 
+	//Conta de 5 a 0
+	
+	for (var i = 5; i >= 0; i--)
+		Console.WriteLine(i);
 
 
 
