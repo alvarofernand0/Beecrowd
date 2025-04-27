@@ -462,7 +462,17 @@ Ex:
 		Console.WriteLine(i);
 
 
+====================================================================
 
+LAÇOS DE REPETIÇÃO: WHILE
+
+- Tradução de 'enquanto', ou seja, enquanto uma condição for verdadeira...
+
+- Definido pela palavra 'while';
+
+- Exige apenas uma condição;
+
+- Checa a condição ANTES de executar;
 
 
 
