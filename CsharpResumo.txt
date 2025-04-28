@@ -9,13 +9,19 @@
 ---- -----  -- -------   -------- --  - -------- ---- --
 
 
-TIPOS DE VARIÁVEIS: int, var, bool, float, double, string;
+TIPOS DE VARIÁVEIS: 
+
+
+int, var, bool, float, double, string;
 
 *tudo em c# é string, então usar Parse. para converter..
 
 ========================================================
 
-COMENTÁRIOS: // uma linha
+COMENTÁRIOS: 
+
+
+// uma linha
 /*  várias linhas  */
 /// Notação XML (Metadata)
 
@@ -25,6 +31,8 @@ Ctrl + k + u (descomenta);
 ========================================================
 
 TIPOS PRIMITIVOS:
+
+
 ou built-in types
 São tipos base cujo outros tipos (complexos) irão derivar
 
@@ -34,6 +42,7 @@ Simple Types, Enums, Structs, Nullable Types
 ========================================================
 
 NÚMEROS INTEIROS:
+
 
 int/uint
 short/ushort
@@ -45,6 +54,7 @@ valores negativos.
 ========================================================
 
 NÚMEROS REAIS:
+
 
 float; double, decimal
 
@@ -59,6 +69,7 @@ decimal salario = 25.000m;
 ========================================================
 
 BOOLEAN:
+
 
 true or false
 
@@ -82,6 +93,7 @@ using system;
 
 CHAR:
 
+
 guarda UM caractere no formato unicode;
 atribuição de valor por aspas simples ''.
 
@@ -93,6 +105,7 @@ var segundaLetra = 'D';
 ============================================
 
 STRING:
+
 
 Guarda uma cadeia de caracteres (uma lista de chars).
 Atribuição de valores por aspas duplas "".
@@ -107,6 +120,7 @@ var texto = "Meu texto";
 
 VAR:
 
+
 - substitui o nome de um tipo.
 - será do tipo do primeiro valor atribuído.
 - recomendado usar var depois de dominar os tipos.
@@ -120,6 +134,7 @@ var nome = "João"; será do tipo string
 
 OBJECT:
 
+
 - Tipo genérico que recebe qualquer valor ou objeto;
 - Caso não saiba o tipo da informação ou ela sera de vários tipos diferentes;
 - Evite usar;
@@ -132,6 +147,7 @@ object nome = "João";  será do tipo object
 ===========================================
 
 Nullabel Types:
+
 
 void: vazio ou não retorna nada;
 null: vazio ou nada. Todo tipo pode receber o valor null;
@@ -152,6 +168,7 @@ Ex:
 
 ALIAS:
 
+
 - apelido que todo tipo no .NET tem;
 - o resultado é o mesmo, mas é indicado usar sempre o alias;
 
@@ -163,6 +180,7 @@ Int32 idade = 25;  Tipo
 ============================================
 
 VALORES PADRÕES:
+
 
 - Todo tipo built-in já possui um valor padrão;
 - Se nenhum valor for informado, seu valor padrão será usado;
@@ -178,6 +196,7 @@ VALORES PADRÕES:
 
 CONVERSÃO IMPLÍCITA:
 
+
 float valor = 25.8f;
 int outro = 25;
 
@@ -186,6 +205,7 @@ valor = outro  //  Conversão implícita
 ===========================================
 
 CONVERSÃO EXPLÍCITA:
+
 
 - Ocorre quando os tipos não são compatíveis;
 - É dada pelo uso do tipo entre parênteses antes da atribuição;
@@ -201,6 +221,7 @@ uint inteiroSemSinal = (uint) inteiro;   // Conversão explícita
 
 PARSE:
 
+
 - Método presente em todo tipo primitivo;
 - Usado para converter um caractere ou string para um tipo qualquer;
 - Caso haja alguma incompatibilidade, gera um erro;
@@ -213,6 +234,7 @@ int inteiro = int.Parse("100");
 
 CONVERT:
 
+
 - Similar ao Parse, porém permite converter vários tipos
 de valor, não apenas string;
 - Devemos informar o tipo na chamada da conversão;
@@ -224,6 +246,7 @@ int inteiro = Convert.ToInt32("100");
 ==========================================
 
 OPERAÇÕES ARITMÉTICAS:
+
 
 - Soma +
 - Subtração -
@@ -264,6 +287,7 @@ int z = (2 + 2) * 2 => 8 executou a soma primeiro
 
 OPERAÇÕES DE ATRIBUIÇÃO:
 
+
 - Usa-se = para atribuir um valor;
 - Pode-se usar igual junto a um operador aritmético;
 
@@ -291,6 +315,7 @@ X = X + 5
 ===================================================================
 
 OPERADORES DE ATRIBUIÇÃO:
+
 
 - Pode-se comparar qualquer tipo de dado: números, strings, bytes...
 
@@ -333,6 +358,7 @@ x >= 0;  // True
 
 OPERADORES LÓGICOS:
 
+
 - Usados em operações condicionais;
 - Retorna SEMPRE verdadeiro ou falso;
 
@@ -356,6 +382,7 @@ Ex:
 
 ESTRUTURA CONDICIONAL IF:
 
+
 - Tradução: "SE", ou seja, "Caso alguma condição seja atendida";
 - Usado para tomada de decisões;
 - Utiliza os operadores lógicos;
@@ -363,6 +390,7 @@ ESTRUTURA CONDICIONAL IF:
 ---------------------------------------
 
 ESTRUTURA CONDICIONAL ELSE:
+
 
 - Complemento do IF;
 - Caso a condição não seja atendida;
@@ -399,6 +427,7 @@ Ex:
 
 ESTRUTURA CONDICIONAL SWITCH:
 
+
 - Utilizado quando temos muitas decisões;
 
 - Executado em cascata;
@@ -421,6 +450,7 @@ Ex:
 =====================================================================
 
 LAÇOS DE REPETIÇÃO: FOR
+
 
 - Tradução "para", ou seja, para cada item em um valor;
 
@@ -466,6 +496,7 @@ Ex:
 
 LAÇOS DE REPETIÇÃO: WHILE
 
+
 - Tradução de 'enquanto', ou seja, enquanto uma condição for verdadeira...
 
 - Definido pela palavra 'while';
@@ -473,6 +504,119 @@ LAÇOS DE REPETIÇÃO: WHILE
 - Exige apenas uma condição;
 
 - Checa a condição ANTES de executar;
+
+
+Ex:
+
+	//Conta de 0 a 5	
+	//Exibe de 0 a 5 na tela
+
+	var valor = 0;
+
+	while (valor <=5)
+
+	{
+		Console.WriteLine(valor);
+		valor++;
+	}
+
+======================================================================
+
+LAÇOS DE REPETIÇÃO: DO/WHILE
+
+
+- Tradução: "Faça", ou seja, realiza uma ação enquanto...
+
+- Definido pela palavra "do/while";
+
+- Exige apenas uma condição no while;
+
+- Checa a condição DEPOIS de executar;
+
+
+Ex:
+
+	var valor = 0
+
+	do
+	{
+		Console.WriteLine("Teste");
+		valor++;	
+	} while (valor < 5);
+
+
+=====================================================================
+
+MÉTODOS E FUNÇÕES:
+
+
+- Podemos segmentar nosso programa em funções;
+
+- Também conhecidos como métodos;
+
+- O 'Main' é um exemplo de método;
+
+- Possui um retorno, um nome e parâmetros;
+
+- Esta composição é chamada de assinatura;
+
+- Começam sempre com maiúscula.
+
+
+Ex:
+
+
+	static void Main(string[] args)
+	{
+		// Invocação do método
+		MeuMetodo("C# é legal");
+	}
+
+	// Definição do Método
+	static void MeuMetodo(string parametro)
+	{
+		Console.WriteLine(parametro);
+	}
+
+----------------------------------------------
+
+Ex:
+
+	//Definição do método
+	//Retorna uma string e recebe vários parâmetros
+
+	static string RetornaNome(string nome, string sobrenome)
+	{
+		//Retorna o nome e sobrenome
+		return nome + " " + sobrenome;
+
+	}
+
+-------------------------------------------
+
+	static void Main(string[] args)
+	{
+
+	//Invocação do método
+	//Armazena o resultado em uma variável
+	var nome = RetornaNome("Antonio", "Nunes");
+
+	//Imprime o nome na tela
+	Console.WriteLine(nome);
+
+	}
+
+
+====================================================================
+
+
+
+
+
+
+
+
+
 
 
 
