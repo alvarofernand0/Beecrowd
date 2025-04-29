@@ -609,13 +609,210 @@ Ex:
 
 ====================================================================
 
+VALUE TYPES E REFERENCE TYPES:
+
+
+- A memória é dividida em duas partes: 'Heap' e 'Stack';
+
+- 'Heap' armazena os dados;
+
+- 'Stack' armazena as referências para os dados;
+
+------------------------------------------------------------
+
+- Qualquer tipo no .NET é tratado como:
+
+	Tipo de Referência (Reference Type)
+	Tipo de Valor (Value Type)
+
+- Tipos de valor armazenam dados;
+
+- São armazenados em um local da memória chamado 'Stack'
+
+-------------------------------------------------------------
+
+- Quando armazenamos um valor, a memória é alocada;
+
+- Este espaço armazena o dado criado;
+
+- Nossa variável acessa este dado diretamente;
+
+- Se assimilarmos uma variável do tipo de valor a outra
+
+	O valor será COPIADO
+	Ambas serão independentes
+
+- Built-in, structs, Enums;
+
+- 'Garbage Collector' não acessa o Stack;
+
+
+Ex de Value Type ------------------------
+
+	int x = 25;
+	int y = x;  // Y é uma cópia de x
+	Console.WriteLine(x);  // 25
+	Console.WriteLine(y);  // 25
+	x = 32;  // Somente x foi alterado
+	Console.WriteLine(x);  // 32
+	Console.WriteLine(y);  // 25
+
+--------------------------------------------
+
+
+Reference Types ------------------
+
+
+- Armazenam o endereço do objeto que contém os dados;
+
+- Não armazena os dados em si;
+
+- São armazenados em um local da memória chamado de 'Heap';
+
+- Ao assimilar uma variável:
+	- Criará uma referência;
+	- Aponta para a mesma informação;
+	- Não são independentes;
+
+- Quando não mais utilizados são marcados para exclusão;
+
+- 'Garbage Collector' passa removendo todos eles;
+
+- Classes, Objects, Arrays...
+
+
+Ex de Reference Type -----------------------------
+
+	var arr = new string[2];
+	arr[0] = "Item 1";
+	var arr2 = arr; // Não cria uma cópia
+
+	Console.WriteLine(arr[0]);
+	Console.WriteLine(arr2[0]);
+
+	// Altera as duas listas
+	arr[0] = "Item Alterado";
+	Console.WriteLine(arr[0]);
+	Console.WriteLine(arr2[0]);
+
+
+========================================================================
+
+
+STRUCTS:
+
+
+- Tipos de dado estruturado;
+
+- Apenas a estrutura, o esqueleto;
+
+- Tipo de valor;
+
+- Armazenam apenas outros tipos de dados;
+
+- Definido pela palavra 'struct';
+
+- Composto de propriedades e métodos;
+
+- Nome sempre com maiúsculo;
+
+	- O mesmo para propriedades e métodos;
+
+- Criado a partir da palavra new;
+
+	- Neste momento sim, temos os valores;
 
 
 
+------- A anatomia de uma estrutura normalmente é:
+
+	struct Product
+	{
+		//Propriedades
+		//Métodos
+	}
 
 
+-------- A anatomia de uma propriedade:
+
+	struct Product
+	{
+		//Propriedades
+		public int Id;
+
+		//Métodos
+	}
+
+--------- Anatomia de um método
+
+	struct Product
+	{
+		public int Id;
+		public float Price;
+
+		public float PriceInDolar(float dolar)
+		{
+			return Price * dolar;
+		}
+	
+	}
 
 
+------------ Para criar um estrutura
+
+	static void Main(string[] args)
+	{
+		//Criar uma estrutura
+		var product = new Product();
+	}
+
+-------------------------------------------------------------------
+
+- Vem com dados dos tipos padrão
+
+- Para preencher os dados
+
+Ex:
+
+	var product = new Product();
+	product.Id = 1;
+	product.Title = "Mouse gamer";
+	product.Price = 197.23f;
+	
+	Console.WriteLine(product.Id);
+	Console.WriteLine(product.Title);
+	Console.WriteLine(product.Price);
+
+---------------------------------------------------------------------
+
+
+- Método construtor é um método com mesmo nome da struct;
+
+
+	struct Product
+	{
+		public Product(int id, string title, float price)
+		{
+			Id = id;
+			Title = title;
+			Price = price;
+		}
+	}
+
+
+--------------------------------------------------------
+
+- Eles facilitam a criação de estruturas
+
+	var product =  new Product(1, "Mouse Gamer", 128.75f);
+	
+	Console.WriteLine(product.Id);
+	Console.WriteLine(product.Title);
+	Console.WriteLine(product.Price);
+	Console.WriteLine(product.PriceInDolar(5.70f));
+
+
+===========================================================================================
 
 
 

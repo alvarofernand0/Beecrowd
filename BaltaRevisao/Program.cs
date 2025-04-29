@@ -4,21 +4,18 @@ class Program
 {
     static void Main(string[] args)
     {
-        MeuMetodo();
+        var arr = new string[2];
+        arr[0] = "Item 1";
 
-        string nome = RetornaNome("Antonio ", "Nunes ", 32);
-        Console.WriteLine(nome);
-    }
-    static void MeuMetodo()
-    {
-        Console.WriteLine("Algum texto Aqui");
-    }
+        var arr2 = arr;
 
-    static string RetornaNome(
-        string nome,
-        string sobrenome,
-        int idade)
-    {
-        return nome + sobrenome + "tem " + idade.ToString();
+        Console.WriteLine(arr[0]);
+        Console.WriteLine(arr2[0]);
+
+        arr[0] = "Item 2";
+        Console.WriteLine(arr[0]);
+        Console.WriteLine(arr2[0]);
     }
+    
+    
 }
