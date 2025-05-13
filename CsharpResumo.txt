@@ -758,7 +758,7 @@ STRUCTS:
 	}
 
 
------------- Para criar um estrutura
+------------ Para criar uma estrutura
 
 	static void Main(string[] args)
 	{
